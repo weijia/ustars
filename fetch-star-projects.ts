@@ -2,7 +2,7 @@ import { Octokit } from 'octokit'
 import fs from 'fs'
 import path from 'path'
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN
+const GITHUB_TOKEN = process.env.GH_TOKEN;
 const octokit = new Octokit({ auth: GITHUB_TOKEN })
 
 export async function fetchStarProjects() {

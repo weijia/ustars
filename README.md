@@ -1,75 +1,29 @@
-# Nuxt Minimal Starter
+# UStars(Github Star Manger)
+UStars 可以方便查询和整理你的 Github Star 仓库, 而不必每次使用 Github Star 功能(太难用)
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+[预览](https://ustars.dev)
 
-## Setup
+## 使用
 
-Make sure to install dependencies:
+- fork 项目
+- 配置 Github Token
+- 部署项目到 vercel 或其他平台
 
-```bash
-# npm
-npm install
+## 技术栈
 
-# pnpm
-pnpm install
+- 前端框架：Nuxt.js
+- 数据来源：GitHub API
+- 更新机制：每日自动同步 `fetch-star-projects`
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+## 开发
 
 ```bash
-# npm
-npm run dev
+# 安装依赖
+bun i
 
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
+# 启动开发服务器
 bun run dev
+
+# 运行脚本 同步 Github Star 仓库
+bun run sync
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

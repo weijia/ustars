@@ -1,4 +1,4 @@
-import allStars from './allStar.json'
+import allStars from './all-stars.json'
 
 export default defineEventHandler((event) => {
   return allStars

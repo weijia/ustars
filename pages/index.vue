@@ -26,6 +26,10 @@ const searchResults = computed(() => {
     .slice(0, 10)
 })
 
+const openStarPage = (url: string) => {
+  window.open(url)
+}
+
 const getMyStars = () => {
   window.open('https://github.com/xiaoxiunique/ustars')
 }
@@ -53,7 +57,8 @@ const getMyStars = () => {
   </div>
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
     <div v-for="star in searchResults" :key="star.id"
-      class="rounded-md p-2 sm:p-4 hover:p-3 flex flex-col border border-gray-200 hover:bg-white/80 hover:border transition-all duration-200 ease-in-out relative cursor-pointer bg-white/40">
+      class="rounded-md p-2 sm:p-4 hover:p-3 flex flex-col border border-gray-200 hover:bg-white/80 hover:border transition-all duration-200 ease-in-out relative cursor-pointer bg-white/40"
+      @click="openStarPage(star.html_url)">
       <div class="flex items-center justify-between">
         <div class="flex items-center">
           <span class="text-md font-medium">{{ star.name }}</span>

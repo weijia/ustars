@@ -27,7 +27,7 @@ jobs:
         run: bun install
         
       - name: Run fetch script
-        run: bun run scripts/fetch-star-projects.ts
+        run: bun run sync
         
       - name: Commit and push changes
         run: |

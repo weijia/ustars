@@ -27,6 +27,8 @@ jobs:
         run: bun install
         
       - name: Run fetch script
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: bun run sync
         
       - name: Commit and push changes
